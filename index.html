@@ -83,7 +83,7 @@ p { margin: 0; }
 nav ul { display: flex; gap: var(--s1); list-style: none; margin: 0; padding: 0; }
 nav a { text-decoration: none; color: var(--ink-2); }
 nav a:hover { color: var(--ink); }
-@media (max-width: 900px) { nav { display: none; } }
+@media (max-width: 820px) { nav { display: none; } }
 
 /* Hero */
 .hero .wrap { padding-block: var(--s4) var(--s3); display: grid; gap: var(--s2); }
@@ -137,33 +137,23 @@ section > .wrap { padding-block: var(--s4); display: grid; gap: var(--s3); }
 .sec-head p { color: var(--ink-2); max-width: 60ch; }
 
 /* Pillars */
-.pillars { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--s2); }
-@media (max-width: 860px) { .pillars { grid-template-columns: 1fr; } }
-.pillar { display: grid; gap: var(--s0); align-content: start; padding-top: var(--s0); border-top: 3px solid var(--c); scroll-margin-top: 6rem; }
+.pillars { display: grid; gap: var(--s3); }
+.pillar { display: grid; gap: var(--s2); padding-top: var(--s1); border-top: 3px solid var(--c); scroll-margin-top: 5rem; }
+.pillar-top { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: var(--s1) var(--s3); align-items: start; }
+.pillar-intro { display: grid; gap: .6rem; }
 .pillar .mono { color: var(--c); }
-.pillar h3 { font-size: 1.9rem; }
-.pillar p { color: var(--ink-2); }
-.pillar ul { list-style: none; padding: 0; margin: 0; display: grid; }
-.pillar li { display: flex; justify-content: space-between; gap: var(--s0); padding: .55rem 0; border-bottom: 1px dashed var(--rule); }
-.pillar li span:last-child { font-family: var(--f-mono); font-size: .72rem; color: var(--ink-2); text-transform: uppercase; letter-spacing: .06em; white-space: nowrap; }
+.pillar h3 { font-size: clamp(1.8rem, 3.4vw, 2.3rem); }
+.pillar-intro p:last-child { color: var(--ink-2); max-width: 46ch; }
+.practices { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: var(--s2); border-top: 1px dashed var(--rule); }
+.practices li { display: flex; justify-content: space-between; gap: var(--s0); padding: .55rem 0; border-bottom: 1px dashed var(--rule); }
+.practices li span:last-child { font-family: var(--f-mono); font-size: .7rem; color: var(--ink-2); text-transform: uppercase; letter-spacing: .06em; white-space: nowrap; align-self: center; }
+.tools { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--s0); }
+@media (max-width: 1000px) { .pillar-top { grid-template-columns: 1fr; } }
+@media (max-width: 900px) { .tools { grid-template-columns: 1fr; } }
+@media (max-width: 560px) { .practices { grid-template-columns: 1fr; } }
 .pillar.is-lit h3 { color: var(--c); }
 
-/* Tool line inside pillars */
-.tool-line { display: flex; flex-wrap: wrap; align-items: baseline; gap: .3rem .8rem; margin-top: var(--s-1); }
-.tool-line .mono { color: var(--ink-2); }
-.tool-line a { text-decoration: none; font-weight: 500; border-bottom: 1px solid var(--c); padding-bottom: 1px; }
-.tool-line a:hover { color: var(--c); }
-
-/* Projects: pillars x platforms */
-.suites { display: grid; gap: var(--s0); }
-.suite-head, .suite { display: grid; grid-template-columns: 11rem repeat(3, minmax(0, 1fr)); gap: var(--s0); }
-.suite-head { padding-bottom: .4rem; border-bottom: 1px solid var(--rule); }
-.suite-head .mono { color: var(--ink-2); }
-.suite { padding-top: var(--s0); border-top: 3px solid var(--c); scroll-margin-top: 6rem; }
-.suite + .suite { margin-top: var(--s0); }
-.suite-label { display: grid; gap: .3rem; align-content: start; }
-.suite-label .mono { color: var(--c); }
-.suite-label h3 { font-size: 1.5rem; }
+/* Tool cards */
 .proj {
   display: grid; grid-template-columns: minmax(0, 1fr) auto; grid-template-rows: auto 1fr auto; gap: .45rem var(--s0);
   padding: 1rem 1.05rem; border: 1px solid var(--rule); border-radius: 3px; background: var(--paper-2);
@@ -178,12 +168,7 @@ a.act:hover { color: var(--c); border-color: var(--c); }
 .act.primary { color: var(--c); border-color: var(--c); }
 .act.muted { color: var(--ink-2); border-bottom: 0; }
 .proj.is-private { border-style: dashed; background: transparent; }
-@media (max-width: 1080px) {
-  .suite-head { display: none; }
-  .suite { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-  .suite-label { grid-column: 1 / -1; display: flex; gap: .8rem; align-items: baseline; }
-}
-@media (max-width: 760px) { .suite { grid-template-columns: 1fr; } }
+
 
 .past { --c: var(--past); }
 .present { --c: var(--present); }
@@ -292,7 +277,6 @@ footer .mono { color: var(--ink-2); }
     <nav aria-label="Main">
       <ul>
         <li><a href="#pillars">Pillars</a></li>
-        <li><a href="#projects">Projects</a></li>
         <li><a href="#journal">Journal</a></li>
         <li><a href="#network">Network</a></li>
         <li><a href="#ethos">Ethos</a></li>
@@ -334,75 +318,69 @@ footer .mono { color: var(--ink-2); }
       </div>
       <div class="pillars">
         <article class="pillar past" id="past">
-          <p class="mono">01 · Past</p>
-          <h3>Inner Terrain</h3>
-          <p>Practices people have used for centuries to regulate, recover and stay present under pressure.</p>
-          <ul>
+          <div class="pillar-top">
+            <div class="pillar-intro">
+              <p class="mono">01 · Past</p>
+              <h3>Inner Terrain</h3>
+              <p>Practices people have used for centuries to regulate, recover and stay present under pressure.</p>
+            </div>
+            <ul class="practices" aria-label="Practices">
             <li><span>Dance &amp; movement</span><span>Body</span></li>
             <li><span>Somatic regulation</span><span>Nervous system</span></li>
             <li><span>Coaching &amp; reflection</span><span>Mind</span></li>
             <li><span>Contemplative practice</span><span>Spirit</span></li>
           </ul>
-          <p class="tool-line"><span class="mono">Tools</span><a href="#projects">sutori · monogatari · haiku <span aria-hidden="true">↓</span></a></p>
+          </div>
+          <div class="tools" aria-label="Inner Terrain tools">
+            <div class="proj is-private"><span class="pn">sutori</span><span class="pk">Web app</span><p>The instant, in-browser tool for Inner Terrain: reflection and check-ins with nothing to install.</p><div class="acts"><span class="act muted">Coming soon</span></div></div>
+            <div class="proj"><span class="pn">monogatari <span class="jp" lang="ja">物語</span></span><span class="pk">Desktop app</span><p>A private, encrypted place to write the story of your life, with your photos placed on the timeline automatically.</p><div class="acts"><a class="act" href="https://github.com/R0N1N9/monogatari" target="_blank" rel="noopener">GitHub <span aria-hidden="true">↗</span></a></div></div>
+            <div class="proj"><span class="pn">haiku</span><span class="pk">Android app</span><p>A pocket check-in for mood, energy and safety, answered three lines at a time. The lite companion to monogatari.</p><div class="acts"><a class="act" href="https://github.com/R0N1N9/haiku" target="_blank" rel="noopener">GitHub <span aria-hidden="true">↗</span></a></div></div>
+          </div>
         </article>
         <article class="pillar present" id="present">
-          <p class="mono">02 · Present</p>
-          <h3>Field Craft</h3>
-          <p>Physical skills for the situations happening right now, from a tense parking lot to a missing hiker.</p>
-          <ul>
+          <div class="pillar-top">
+            <div class="pillar-intro">
+              <p class="mono">02 · Present</p>
+              <h3>Field Craft</h3>
+              <p>Physical skills for the situations happening right now, from a tense parking lot to a missing hiker.</p>
+            </div>
+            <ul class="practices" aria-label="Practices">
             <li><span>Tactical self defense</span><span>Personal</span></li>
             <li><span>Situational awareness</span><span>Everyday</span></li>
             <li><span>Search &amp; rescue</span><span>Wilderness</span></li>
             <li><span>Emergency readiness</span><span>Household</span></li>
           </ul>
-          <p class="tool-line"><span class="mono">Tools</span><a href="#projects">vigilante · vigilance · vigil <span aria-hidden="true">↓</span></a></p>
+          </div>
+          <div class="tools" aria-label="Field Craft tools">
+            <div class="proj"><span class="pn">vigilante</span><span class="pk">Web app</span><p>A situational-awareness console that runs in any browser, plus a Field Agent phone app with nothing to install.</p><div class="acts"><a class="act primary" href="https://r0n1n9.github.io/vigilante/" target="_blank" rel="noopener">Open web app <span aria-hidden="true">↗</span></a><a class="act" href="https://github.com/R0N1N9/vigilante" target="_blank" rel="noopener">GitHub <span aria-hidden="true">↗</span></a></div></div>
+            <div class="proj"><span class="pn">vigilance</span><span class="pk">Desktop app</span><p>The desktop edition for Mac, Linux and Windows, adding drone Remote ID scanning, mesh radios and multi-monitor pop-outs.</p><div class="acts"><a class="act" href="https://github.com/R0N1N9/vigilance" target="_blank" rel="noopener">GitHub <span aria-hidden="true">↗</span></a></div></div>
+            <div class="proj is-private"><span class="pn">vigil</span><span class="pk">Android app</span><p>Public safety data for wherever you are right now, ranked by what matters to you, with what to do about each.</p><div class="acts"><span class="act muted">Private repo · link coming</span></div></div>
+          </div>
         </article>
         <article class="pillar future" id="future">
-          <p class="mono">03 · Future</p>
-          <h3>Digital OPSEC</h3>
-          <p>Protecting yourself where most threats now begin, and learning to find what is hidden in public data.</p>
-          <ul>
+          <div class="pillar-top">
+            <div class="pillar-intro">
+              <p class="mono">03 · Future</p>
+              <h3>Digital OPSEC</h3>
+              <p>Protecting yourself where most threats now begin, and learning to find what is hidden in public data.</p>
+            </div>
+            <ul class="practices" aria-label="Practices">
             <li><span>Personal cyber security</span><span>Defense</span></li>
             <li><span>OSINT investigation</span><span>Research</span></li>
             <li><span>Privacy &amp; footprint audits</span><span>Exposure</span></li>
             <li><span>Scam &amp; threat literacy</span><span>Awareness</span></li>
           </ul>
-          <p class="tool-line"><span class="mono">Tools</span><a href="#projects">wakizashi · katana · karambit <span aria-hidden="true">↓</span></a></p>
+          </div>
+          <div class="tools" aria-label="Digital OPSEC tools">
+            <div class="proj"><span class="pn">wakizashi <span class="jp" lang="ja">脇差</span></span><span class="pk">Web app</span><p>The web edition of the RoninSec security suite: threat intel, defense, assessment and personal OPSEC, running entirely in your browser.</p><div class="acts"><a class="act" href="https://github.com/R0N1N9/wakizashi" target="_blank" rel="noopener">GitHub <span aria-hidden="true">↗</span></a></div></div>
+            <div class="proj is-private"><span class="pn">katana <span class="jp" lang="ja">刀</span></span><span class="pk">Desktop suite</span><p>The full RoninSec security console: threat intel, defense, authorized offense and counter-intel in one portable app.</p><div class="acts"><span class="act muted">Private repo · link coming</span></div></div>
+            <div class="proj"><span class="pn">karambit</span><span class="pk">Android app</span><p>The native Android edition: Bluetooth recon, device hardening audit, network recon and offline IOC tools.</p><div class="acts"><a class="act" href="https://github.com/R0N1N9/karambit" target="_blank" rel="noopener">GitHub <span aria-hidden="true">↗</span></a></div></div>
+          </div>
         </article>
       </div>
     </div>
   </section>
 
-  <section id="projects">
-    <div class="wrap">
-      <div class="sec-head">
-        <p class="mono">Projects</p>
-        <h2>One suite for every pillar.</h2>
-        <p>Each pillar has a web app that opens instantly in your browser, a desktop app for deeper work, and an Android app for the field.</p>
-      </div>
-      <div class="suites">
-        <div class="suite-head" aria-hidden="true"><span></span><span class="mono">Web · instant</span><span class="mono">Desktop</span><span class="mono">Android</span></div>
-        <div class="suite past">
-          <div class="suite-label"><p class="mono">01 · Past</p><h3>Inner Terrain</h3></div>
-          <div class="proj is-private"><span class="pn">sutori</span><span class="pk">Web app</span><p>The instant, in-browser tool for Inner Terrain: reflection and check-ins with nothing to install.</p><div class="acts"><span class="act muted">Coming soon</span></div></div>
-          <div class="proj"><span class="pn">monogatari <span class="jp" lang="ja">物語</span></span><span class="pk">Desktop app</span><p>A private, encrypted place to write the story of your life, with your photos placed on the timeline automatically.</p><div class="acts"><a class="act" href="https://github.com/R0N1N9/monogatari" target="_blank" rel="noopener">GitHub <span aria-hidden="true">↗</span></a></div></div>
-          <div class="proj"><span class="pn">haiku</span><span class="pk">Android app</span><p>A pocket check-in for mood, energy and safety, answered three lines at a time. The lite companion to monogatari.</p><div class="acts"><a class="act" href="https://github.com/R0N1N9/haiku" target="_blank" rel="noopener">GitHub <span aria-hidden="true">↗</span></a></div></div>
-        </div>
-        <div class="suite present">
-          <div class="suite-label"><p class="mono">02 · Present</p><h3>Field Craft</h3></div>
-          <div class="proj"><span class="pn">vigilante</span><span class="pk">Web app</span><p>A situational-awareness console that runs in any browser, plus a Field Agent phone app with nothing to install.</p><div class="acts"><a class="act primary" href="https://r0n1n9.github.io/vigilante/" target="_blank" rel="noopener">Open web app <span aria-hidden="true">↗</span></a><a class="act" href="https://github.com/R0N1N9/vigilante" target="_blank" rel="noopener">GitHub <span aria-hidden="true">↗</span></a></div></div>
-          <div class="proj"><span class="pn">vigilance</span><span class="pk">Desktop app</span><p>The desktop edition for Mac, Linux and Windows, adding drone Remote ID scanning, mesh radios and multi-monitor pop-outs.</p><div class="acts"><a class="act" href="https://github.com/R0N1N9/vigilance" target="_blank" rel="noopener">GitHub <span aria-hidden="true">↗</span></a></div></div>
-          <div class="proj is-private"><span class="pn">vigil</span><span class="pk">Android app</span><p>Public safety data for wherever you are right now, ranked by what matters to you, with what to do about each.</p><div class="acts"><span class="act muted">Private repo · link coming</span></div></div>
-        </div>
-        <div class="suite future">
-          <div class="suite-label"><p class="mono">03 · Future</p><h3>Digital OPSEC</h3></div>
-          <div class="proj"><span class="pn">wakizashi <span class="jp" lang="ja">脇差</span></span><span class="pk">Web app</span><p>The web edition of the RoninSec security suite: threat intel, defense, assessment and personal OPSEC, running entirely in your browser.</p><div class="acts"><a class="act" href="https://github.com/R0N1N9/wakizashi" target="_blank" rel="noopener">GitHub <span aria-hidden="true">↗</span></a></div></div>
-          <div class="proj is-private"><span class="pn">katana <span class="jp" lang="ja">刀</span></span><span class="pk">Desktop suite</span><p>The full RoninSec security console: threat intel, defense, authorized offense and counter-intel in one portable app.</p><div class="acts"><span class="act muted">Private repo · link coming</span></div></div>
-          <div class="proj"><span class="pn">karambit</span><span class="pk">Android app</span><p>The native Android edition: Bluetooth recon, device hardening audit, network recon and offline IOC tools.</p><div class="acts"><a class="act" href="https://github.com/R0N1N9/karambit" target="_blank" rel="noopener">GitHub <span aria-hidden="true">↗</span></a></div></div>
-        </div>
-      </div>
-    </div>
-  </section>
 
   <section id="journal">
     <div class="wrap">

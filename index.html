@@ -83,7 +83,7 @@ p { margin: 0; }
 nav ul { display: flex; gap: var(--s1); list-style: none; margin: 0; padding: 0; }
 nav a { text-decoration: none; color: var(--ink-2); }
 nav a:hover { color: var(--ink); }
-@media (max-width: 640px) { nav { display: none; } }
+@media (max-width: 760px) { nav { display: none; } }
 
 /* Hero */
 .hero .wrap { padding-block: var(--s4) var(--s3); display: grid; gap: var(--s2); }
@@ -216,6 +216,41 @@ a.act:hover { color: var(--c); border-color: var(--c); }
 .tenet h3 { font-family: var(--f-body); font-weight: 600; font-size: 1.1rem; margin-bottom: .25rem; }
 .tenet p { color: var(--ink-2); }
 
+/* About */
+.about-grid { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr); gap: var(--s3); align-items: start; }
+.bio { display: grid; gap: var(--s0); }
+.bio p { color: var(--ink-2); font-size: 1.05rem; max-width: 60ch; }
+.bio p:first-child { color: var(--ink); font-size: 1.15rem; }
+.interests { margin: 0; display: grid; border-top: 1px solid var(--rule); }
+.interests > div { display: grid; grid-template-columns: 6.5rem minmax(0, 1fr); gap: var(--s0); padding: .95rem 0; border-bottom: 1px solid var(--rule); }
+.interests dt { color: var(--c); padding-top: .2rem; }
+.interests dd { margin: 0; }
+.lens { --c: var(--brass); }
+@media (max-width: 860px) { .about-grid { grid-template-columns: 1fr; gap: var(--s2); } }
+
+/* Contact form */
+.contact-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.3fr); gap: var(--s3); align-items: start; }
+@media (max-width: 860px) { .contact-grid { grid-template-columns: 1fr; gap: var(--s2); } }
+.direct { font-size: .95rem; }
+.addr { color: var(--ink); user-select: all; overflow-wrap: anywhere; }
+form { display: grid; gap: var(--s0); }
+form .row { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--s0); }
+@media (max-width: 560px) { form .row { grid-template-columns: 1fr; } }
+.field { display: grid; gap: .4rem; min-width: 0; }
+.field .mono { color: var(--ink-2); }
+input, select, textarea {
+  width: 100%; font: inherit; color: var(--ink); background: var(--paper-2);
+  border: 1px solid var(--rule); border-radius: 3px; padding: .7rem .8rem;
+}
+textarea { resize: vertical; min-height: 8rem; }
+input:focus, select:focus, textarea:focus { outline: none; border-color: var(--brass); box-shadow: 0 0 0 1px var(--brass); }
+.field.invalid input, .field.invalid textarea { border-color: var(--red); }
+form button { font: inherit; font-weight: 500; cursor: pointer; }
+.submit-row { display: flex; flex-wrap: wrap; align-items: center; gap: var(--s-1) var(--s0); }
+.hint { font-size: .85rem; color: var(--ink-2); }
+.form-status { font-size: .92rem; color: var(--ink-2); min-height: 1.4em; }
+.form-status.err { color: var(--red); }
+
 /* Footer */
 footer { border-top: 1px solid var(--rule); background: var(--paper-2); }
 footer .wrap { padding-block: var(--s3); display: flex; flex-wrap: wrap; justify-content: space-between; gap: var(--s1); align-items: end; }
@@ -241,6 +276,8 @@ footer .mono { color: var(--ink-2); }
         <li><a href="#journal">Journal</a></li>
         <li><a href="#network">Network</a></li>
         <li><a href="#ethos">Ethos</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
   </div>
@@ -427,6 +464,62 @@ footer .mono { color: var(--ink-2); }
       </div>
     </div>
   </section>
+
+  <section id="about">
+    <div class="wrap">
+      <div class="about-grid">
+        <div class="sec-head">
+          <p class="mono">About</p>
+          <h2>The ronin behind RoninSec.</h2>
+          <div class="bio">
+            <p>I'm a nomad with a background in cybersecurity. For more than five years I've lived on the road across the US, and I've traveled to nearly 30 countries along the way.</p>
+            <p>RoninSec is where everything I care about meets: protecting people and information, moving well, and documenting the places I pass through. I build tools for the work, and I share what I learn.</p>
+          </div>
+        </div>
+        <dl class="interests" aria-label="Interests">
+          <div class="past"><dt class="mono">Movement</dt><dd>Dance, martial arts, sports &amp; the outdoors</dd></div>
+          <div class="present"><dt class="mono">Field</dt><dd>Travel, aerial drone work, medical research</dd></div>
+          <div class="future"><dt class="mono">Security</dt><dd>Cybersecurity, OSINT and all things security</dd></div>
+          <div class="lens"><dt class="mono">Lens</dt><dd>Photography and videography</dd></div>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="wrap">
+      <div class="contact-grid">
+        <div class="sec-head">
+          <p class="mono">Contact</p>
+          <h2>Get in touch.</h2>
+          <p>Questions, collaborations, shoots, security work or classes. Write and I'll reply from the road.</p>
+          <p class="direct">Or email directly: <span class="addr">roninsec42@proton.me</span></p>
+        </div>
+        <form id="contact-form" novalidate>
+          <div class="row">
+            <label class="field" for="cf-name"><span class="mono">Name</span><input id="cf-name" name="name" type="text" autocomplete="name" required></label>
+            <label class="field" for="cf-email"><span class="mono">Your email</span><input id="cf-email" name="email" type="email" autocomplete="email" required></label>
+          </div>
+          <label class="field" for="cf-topic"><span class="mono">About</span>
+            <select id="cf-topic" name="topic">
+              <option>General</option>
+              <option>Security work</option>
+              <option>RoninRecon photo or video shoot</option>
+              <option>RoninRhythm dance or music</option>
+              <option>RoninRxisk</option>
+              <option>Collaboration</option>
+            </select>
+          </label>
+          <label class="field" for="cf-msg"><span class="mono">Message</span><textarea id="cf-msg" name="message" rows="6" required></textarea></label>
+          <div class="submit-row">
+            <button class="btn solid" type="submit">Write email</button>
+            <p class="hint">Opens your email app with this message filled in.</p>
+          </div>
+          <p class="form-status" id="cf-status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </div>
+  </section>
 </main>
 
 <footer>
@@ -472,6 +565,32 @@ footer .mono { color: var(--ink-2); }
   }
   chips.forEach(c => c.addEventListener('click', () => filter(c.dataset.filter)));
   try { const saved = localStorage.getItem('roninsec-filter'); if (saved) filter(saved); } catch (e) {}
+
+  const form = document.getElementById('contact-form');
+  const status = document.getElementById('cf-status');
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const req = ['cf-name', 'cf-email', 'cf-msg'].map(id => document.getElementById(id));
+    let bad = null;
+    req.forEach(el => {
+      const ok = el.value.trim() !== '' && el.checkValidity();
+      el.closest('.field').classList.toggle('invalid', !ok);
+      if (!ok && !bad) bad = el;
+    });
+    if (bad) {
+      status.className = 'form-status err';
+      status.textContent = bad.id === 'cf-email' && bad.value.trim() ? 'Check your email address and try again.' : 'Fill in your name, email and message.';
+      bad.focus();
+      return;
+    }
+    const v = id => document.getElementById(id).value.trim();
+    const subject = `[RoninSec] ${v('cf-topic')}: ${v('cf-name')}`;
+    const body = `${v('cf-msg')}\n\n${v('cf-name')}\n${v('cf-email')}`;
+    window.location.href = `mailto:roninsec42@proton.me?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    status.className = 'form-status';
+    status.textContent = "Your email app should open with the message ready to send. If it doesn't, email roninsec42@proton.me directly.";
+  });
+  form.addEventListener('input', (e) => { const f = e.target.closest('.field'); if (f) f.classList.remove('invalid'); });
 })();
 </script>
 </body>

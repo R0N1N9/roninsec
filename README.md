@@ -1,26 +1,63 @@
 # RoninSec
 
-Source for the RoninSec website, the umbrella brand for my projects and sub-brands.
-Live at https://r0n1n9.github.io/roninsec/
+**Security for the digital, physical, and spiritual wanderer.**
 
-## Structure
+RoninSec is my umbrella brand for security and reconnaissance across three timelines: the inner work rooted in the past, the field skills the present calls for, and the digital defense the future demands. This repo is the source for its website.
 
-| Path | Site |
+**Live site:** https://r0n1n9.github.io/roninsec/
+
+## Pillars & Projects
+
+Each pillar has a web app that opens in your browser, a desktop app for deeper work, and an Android app for the field.
+
+### Past · Inner Terrain
+Mind, body, spirit: movement, somatic regulation, coaching and contemplative practice.
+
+| Project | Platform | Links |
+|---|---|---|
+| sutori | Web app | Coming soon |
+| [monogatari](https://github.com/R0N1N9/monogatari) 物語 | Desktop | Private, encrypted life story writing with photos placed on the timeline automatically |
+| [haiku](https://github.com/R0N1N9/haiku) | Android | Three-line check-ins for mood, energy and safety; the lite companion to monogatari |
+
+### Present · Field Craft
+Defense, rescue, readiness: self defense, situational awareness, search and rescue and emergency readiness.
+
+| Project | Platform | Links |
+|---|---|---|
+| [vigilante](https://github.com/R0N1N9/vigilante) | Web app | [Open the web app](https://r0n1n9.github.io/vigilante/) · situational-awareness console, plus a Field Agent phone app |
+| [vigilance](https://github.com/R0N1N9/vigilance) | Desktop | Desktop edition with drone Remote ID scanning, mesh radios and multi-monitor pop-outs |
+| vigil | Android | Private repo · public safety data for where you are, ranked by what matters to you |
+
+### Future · Digital OPSEC
+Cyber security, OSINT, privacy and threat literacy.
+
+| Project | Platform | Links |
+|---|---|---|
+| [wakizashi](https://github.com/R0N1N9/wakizashi) 脇差 | Web app | [Open the web app](https://r0n1n9.github.io/wakizashi/) · threat intel, defense, assessment and personal OPSEC in the browser |
+| katana 刀 | Desktop | Private repo · the full security console: threat intel, defense, authorized offense and counter-intel |
+| [karambit](https://github.com/R0N1N9/karambit) | Android | Bluetooth recon, device hardening audit, network recon and offline IOC tools |
+
+## The Ronin network
+
+Sibling brands that carry the RoninSec approach into specific passions. Each has its own repo, so each can take its own domain later.
+
+| Brand | Focus | Site | Projects |
+|---|---|---|---|
+| [RoninRecon](https://github.com/R0N1N9/roninrecon) | Aerial photo & video, travel | https://r0n1n9.github.io/roninrecon/ | [Intel Scraper Studio](https://github.com/R0N1N9/intelscraperstudio): imports, backs up and scores camera and drone footage. **Survey**: search and rescue app (coming soon) |
+| [RoninRxISK](https://github.com/R0N1N9/roninrxisk) | Psych med harm & PSSD research | https://r0n1n9.github.io/roninrxisk/ | [PSSD Atlas](https://r0n1n9.github.io/roninrxisk/atlas/): a living evidence map of PSSD research and drug-safety signals |
+| [RoninRhythm](https://github.com/R0N1N9/roninrhythm) | Dance instruction, DJ & music production | https://r0n1n9.github.io/roninrhythm/ | [Sway](https://r0n1n9.github.io/roninrhythm/#sway): find partner-dance socials, classes and festivals anywhere (in development) |
+
+## Contact
+
+- Email: roninsec42@proton.me
+- Instagram: [@roninsec](https://www.instagram.com/roninsec/)
+- YouTube: [@R0N1N_42](https://www.youtube.com/@R0N1N_42)
+- X: [@R0N1N99](https://x.com/R0N1N99)
+
+## Repo structure
+
+| Path | What it is |
 |---|---|
-| `index.html` | RoninSec home: the three pillars, project links, journal, network |
-
-## Sub-brands (one repo each)
-
-- [roninrecon](https://github.com/R0N1N9/roninrecon) → https://r0n1n9.github.io/roninrecon/
-- [roninrxisk](https://github.com/R0N1N9/roninrxisk) → https://r0n1n9.github.io/roninrxisk/ (PSSD Atlas at `/atlas/`)
-- [roninrhythm](https://github.com/R0N1N9/roninrhythm) → https://r0n1n9.github.io/roninrhythm/
-
-Each repo can take its own custom domain later.
-
-## Pillars and projects
-
-- **Past · Inner Terrain**: sutori (web), monogatari, haiku
-- **Present · Field Craft**: vigilante (web), vigilance, vigil
-- **Future · Digital OPSEC**: wakizashi (web), katana, karambit
-
-No build step. `.nojekyll` tells GitHub Pages to serve the files as-is.
+| `index.html` | The whole site: hero, pillars & projects, journal, network, ethos, about, contact |
+| `images/` | Site photos, with location and camera metadata removed |
+| `.nojekyll` | Tells GitHub Pages to serve the files as-is, with no build step |

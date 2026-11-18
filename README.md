@@ -43,7 +43,7 @@ Sibling brands that carry the RoninSec approach into specific passions. Each has
 
 | Brand | Focus | Site | Projects |
 |---|---|---|---|
-| [RoninRecon](https://github.com/R0N1N9/roninrecon) | Aerial photo & video, travel | https://r0n1n9.github.io/roninrecon/ | [Intel Scraper Studio](https://github.com/R0N1N9/intelscraperstudio): imports, backs up and scores camera and drone footage. **Survey**: search and rescue app (coming soon) |
+| [RoninRecon](https://github.com/R0N1N9/roninrecon) | Aerial photo & video, travel | https://r0n1n9.github.io/roninrecon/ | [Intel Scraper Studio](https://github.com/R0N1N9/intelscraperstudio): imports, backs up and scores camera and drone footage. [ISR](https://github.com/R0N1N9/ISR): offline drone tools for search and rescue, SAR search planning and site security surveys |
 | [RoninRxISK](https://github.com/R0N1N9/roninrxisk) | Psych med harm & PSSD research | https://r0n1n9.github.io/roninrxisk/ | [PSSD Atlas](https://r0n1n9.github.io/roninrxisk/atlas/): a living evidence map of PSSD research and drug-safety signals |
 | [RoninRhythm](https://github.com/R0N1N9/roninrhythm) | Dance instruction, DJ & music production | https://r0n1n9.github.io/roninrhythm/ | [Sway](https://r0n1n9.github.io/roninrhythm/#sway): find partner-dance socials, classes and festivals anywhere (in development) |
 

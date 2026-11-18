@@ -147,6 +147,25 @@ section > .wrap { padding-block: var(--s4); display: grid; gap: var(--s3); }
 .pillar li span:last-child { font-family: var(--f-mono); font-size: .72rem; color: var(--ink-2); text-transform: uppercase; letter-spacing: .06em; white-space: nowrap; }
 .pillar.is-lit h3 { color: var(--c); }
 
+/* Project cards inside pillars */
+.projects { display: grid; gap: .6rem; margin-top: var(--s-1); }
+.projects > .mono { color: var(--ink-2); }
+.proj {
+  display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: .35rem var(--s0);
+  padding: .9rem 1rem; border: 1px solid var(--rule); border-radius: 3px;
+  background: var(--paper-2); text-decoration: none; color: var(--ink);
+  transition: border-color .2s, background .2s;
+}
+a.proj:hover { border-color: var(--c); }
+.proj .pn { font-weight: 600; font-size: 1.02rem; min-width: 0; }
+.proj .pn .jp { font-family: var(--f-display); font-weight: 400; color: var(--c); margin-left: .25rem; }
+.proj .pk { font-family: var(--f-mono); font-size: .68rem; letter-spacing: .08em; text-transform: uppercase; color: var(--c); align-self: center; white-space: nowrap; }
+.proj p { grid-column: 1 / -1; color: var(--ink-2); font-size: .9rem; line-height: 1.5; }
+.proj .go { grid-column: 1 / -1; font-family: var(--f-mono); font-size: .7rem; letter-spacing: .08em; text-transform: uppercase; color: var(--ink); }
+a.proj:hover .go { color: var(--c); }
+.proj.is-private { border-style: dashed; background: transparent; }
+.proj.is-private .go { color: var(--ink-2); }
+
 .past { --c: var(--past); }
 .present { --c: var(--present); }
 .future { --c: var(--future); }
@@ -181,6 +200,9 @@ section > .wrap { padding-block: var(--s4); display: grid; gap: var(--s3); }
 .sub .name em { font-style: normal; color: var(--brass); }
 .sub .mono { color: var(--ink-2); }
 .sub p { color: var(--ink-2); }
+.status.live { border-color: var(--past); color: var(--past); }
+.visit { justify-self: start; display: inline-flex; gap: .4rem; font-weight: 500; text-decoration: none; border-bottom: 1px solid var(--red); padding-bottom: 2px; }
+.visit:hover { color: var(--red); }
 .status { justify-self: start; font-family: var(--f-mono); font-size: .7rem; letter-spacing: .08em; text-transform: uppercase; padding: .25rem .55rem; border: 1px solid var(--red); color: var(--red); border-radius: 2px; }
 
 /* Ethos */
@@ -244,7 +266,7 @@ footer .mono { color: var(--ink-2); }
       <div class="sec-head">
         <p class="mono">The three pillars</p>
         <h2>Reconnaissance starts inside and works outward.</h2>
-        <p>A calm nervous system reads a room better. A trained body reacts faster. A clean digital footprint gives an adversary less to work with. Each pillar supports the other two.</p>
+        <p>A calm nervous system reads a room better. A trained body reacts faster. A clean digital footprint gives an adversary less to work with. Each pillar supports the other two, and each has tools I build for it.</p>
       </div>
       <div class="pillars">
         <article class="pillar past" id="past">
@@ -257,6 +279,11 @@ footer .mono { color: var(--ink-2); }
             <li><span>Coaching &amp; reflection</span><span>Mind</span></li>
             <li><span>Contemplative practice</span><span>Spirit</span></li>
           </ul>
+          <div class="projects">
+            <p class="mono">Projects</p>
+            <a class="proj" href="https://github.com/R0N1N9/monogatari" target="_blank" rel="noopener"><span class="pn">monogatari <span class="jp" lang="ja">物語</span></span><span class="pk">Desktop app</span><p>A private, encrypted place to write the story of your life, with your photos placed on the timeline automatically.</p><span class="go">View on GitHub <span aria-hidden="true">↗</span></span></a>
+            <a class="proj" href="https://github.com/R0N1N9/haiku" target="_blank" rel="noopener"><span class="pn">haiku</span><span class="pk">Android app</span><p>A pocket check-in for mood, energy and safety, answered three lines at a time. The lite companion to monogatari.</p><span class="go">View on GitHub <span aria-hidden="true">↗</span></span></a>
+          </div>
         </article>
         <article class="pillar present" id="present">
           <p class="mono">02 · Present</p>
@@ -268,6 +295,11 @@ footer .mono { color: var(--ink-2); }
             <li><span>Search &amp; rescue</span><span>Wilderness</span></li>
             <li><span>Emergency readiness</span><span>Household</span></li>
           </ul>
+          <div class="projects">
+            <p class="mono">Projects</p>
+            <a class="proj" href="https://github.com/R0N1N9/vigilance" target="_blank" rel="noopener"><span class="pn">vigilance</span><span class="pk">Desktop console</span><p>Neighborhood situational awareness: aircraft, weather, crime data and local incidents on one operations screen.</p><span class="go">View on GitHub <span aria-hidden="true">↗</span></span></a>
+            <div class="proj is-private"><span class="pn">vigil</span><span class="pk">Android app</span><p>Public safety data for wherever you are right now, ranked by what matters to you, with what to do about each.</p><span class="go">Private repo · link coming</span></div>
+          </div>
         </article>
         <article class="pillar future" id="future">
           <p class="mono">03 · Future</p>
@@ -279,6 +311,11 @@ footer .mono { color: var(--ink-2); }
             <li><span>Privacy &amp; footprint audits</span><span>Exposure</span></li>
             <li><span>Scam &amp; threat literacy</span><span>Awareness</span></li>
           </ul>
+          <div class="projects">
+            <p class="mono">Projects</p>
+            <div class="proj is-private"><span class="pn">katana <span class="jp" lang="ja">刀</span></span><span class="pk">Security suite</span><p>The RoninSec security console: threat intel, defense, authorized offense and counter-intel in one portable app.</p><span class="go">Private repo · link coming</span></div>
+            <a class="proj" href="https://github.com/R0N1N9/karambit" target="_blank" rel="noopener"><span class="pn">karambit</span><span class="pk">Android app</span><p>Katana's native Android sibling: Bluetooth recon, device hardening audit, network recon and offline IOC tools.</p><span class="go">View on GitHub <span aria-hidden="true">↗</span></span></a>
+          </div>
         </article>
       </div>
     </div>
@@ -344,7 +381,8 @@ footer .mono { color: var(--ink-2); }
           <p class="mono">Aerial photo &amp; video · Travel</p>
           <p class="name">Ronin <em>Recon</em></p>
           <p>Adventure and travel stories told from above, with aerial photography and videography for people and places worth documenting.</p>
-          <span class="status">Coming soon</span>
+          <span class="status live">Live</span>
+          <a class="visit" href="recon/">Visit Ronin Recon <span aria-hidden="true">→</span></a>
         </article>
         <article class="sub">
           <p class="mono">Activism · Advocacy</p>

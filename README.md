@@ -1,9 +1,22 @@
 # RoninSec
 
-Source for the RoninSec website: security for the whole person across three timelines.
+Source for the RoninSec website, the umbrella brand for my projects and sub-brands.
+Live at https://r0n1n9.github.io/roninsec/
 
-- **Past · Inner Terrain**: movement, somatic regulation, coaching
-- **Present · Field Craft**: self defense, search and rescue, readiness
-- **Future · Digital Recon**: cyber security, OSINT
+## Structure
 
-The whole site is a single `index.html` (no build step). `.nojekyll` tells GitHub Pages to serve it as-is.
+| Path | Site |
+|---|---|
+| `index.html` | RoninSec home: the three pillars, project links, journal, network |
+| `recon/index.html` | RoninRecon (travel, aerial photo and video) → `/roninsec/recon/` |
+
+To add a sub-brand, create a folder (for example `rhythm/`) with its own `index.html`.
+It goes live at `/roninsec/rhythm/`.
+
+## Pillars and projects
+
+- **Past · Inner Terrain**: monogatari, haiku
+- **Present · Field Craft**: vigilance, vigil
+- **Future · Digital Recon**: katana, karambit
+
+No build step. `.nojekyll` tells GitHub Pages to serve the files as-is.

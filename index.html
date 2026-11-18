@@ -94,7 +94,17 @@ nav a:hover { color: var(--ink); }
 .motto::before { content: ""; width: 2.5rem; height: 1px; background: var(--red); }
 .motto .q { color: var(--red); }
 @media (max-width: 560px) { .motto::before { display: none; } }
-.hero h1 { font-size: clamp(2.4rem, 6vw, 4.4rem); max-width: 17ch; }
+.hero h1 { font-size: clamp(2.4rem, 5vw, 3.9rem); max-width: 17ch; }
+.hero-grid { display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr); gap: var(--s3); align-items: center; }
+.hero-main { display: grid; gap: var(--s2); align-content: start; }
+.hero-photo { margin: 0; display: grid; gap: .6rem; }
+.hero-photo img { display: block; width: 100%; max-width: 100%; height: auto; aspect-ratio: 1 / 1; object-fit: cover; border-radius: 3px; border: 1px solid var(--rule); }
+.hero-photo figcaption { color: var(--ink-2); display: flex; align-items: center; gap: .5rem; }
+.hero-photo figcaption::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: var(--red); }
+@media (max-width: 860px) {
+  .hero-grid { grid-template-columns: 1fr; gap: var(--s2); }
+  .hero-photo img { aspect-ratio: 4 / 3; object-position: 50% 60%; }
+}
 .hero .lede { font-size: 1.15rem; color: var(--ink-2); max-width: 58ch; }
 .ctas { display: flex; flex-wrap: wrap; gap: var(--s-1); }
 .btn {
@@ -296,6 +306,8 @@ footer .mono { color: var(--ink-2); }
 <main id="top">
   <div class="hero">
     <div class="wrap">
+      <div class="hero-grid">
+      <div class="hero-main">
       <div class="hero-top">
         <p class="mono">Field log 001 · Est. 2026</p>
         <p class="motto"><span><span class="q" aria-hidden="true">“</span>Activate your presence.<span class="q" aria-hidden="true">”</span></span></p>
@@ -305,6 +317,12 @@ footer .mono { color: var(--ink-2); }
       <div class="ctas">
         <a class="btn solid" href="#journal">Read the journal</a>
         <a class="btn line" href="#pillars">Explore the pillars</a>
+      </div>
+      </div>
+      <figure class="hero-photo">
+        <img src="images/on-the-road.jpg" width="640" height="640" alt="Standing beside a silver Subaru Forester on a desert road at first light, a snow-dusted peak behind." decoding="async" fetchpriority="high">
+        <figcaption class="mono">Home base · 2015 Subaru Forester</figcaption>
+      </figure>
       </div>
 
       <div class="axis" aria-label="The three RoninSec timelines">

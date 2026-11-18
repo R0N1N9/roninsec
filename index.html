@@ -255,10 +255,12 @@ a.act:hover { color: var(--c); border-color: var(--c); }
 .post-img { display: block; width: calc(100% + 2 * var(--s1)); max-width: none; margin: calc(-1 * var(--s1)) calc(-1 * var(--s1)) .3rem; aspect-ratio: 16 / 10; height: auto; object-fit: cover; background: var(--rule); }
 .post.featured { grid-column: 1 / -1; padding: 0; gap: 0; grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr); }
 .post.featured .post-img { width: 100%; margin: 0; height: 100%; min-height: 300px; aspect-ratio: auto; }
+.post.featured.flip { grid-template-columns: minmax(0, 1fr) minmax(0, 1.35fr); }
+.post.featured.flip .post-img { order: 2; }
 .post.featured .post-body { display: grid; gap: .8rem; align-content: center; padding: var(--s2); }
 .post.featured h3 { font-family: var(--f-display); font-weight: 400; font-size: clamp(1.5rem, 2.6vw, 2rem); line-height: 1.15; }
 .post.featured p { font-size: 1rem; }
-@media (max-width: 760px) { .post.featured { grid-template-columns: 1fr; } .post.featured .post-img { height: auto; min-height: 0; aspect-ratio: 16 / 10; } .post.featured .post-body { padding: var(--s1); } }
+@media (max-width: 760px) { .post.featured, .post.featured.flip { grid-template-columns: 1fr; } .post.featured.flip .post-img { order: 0; } .post.featured .post-img { height: auto; min-height: 0; aspect-ratio: 16 / 10; } .post.featured .post-body { padding: var(--s1); } }
 
 /* Network */
 .network { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0; border: 1px solid var(--rule); border-radius: 4px; }
@@ -569,6 +571,40 @@ footer .mono { color: var(--ink-2); }
           <div class="meta"><b>Future</b><span>8 min read</span></div>
           <h3>Lock down your accounts in one afternoon</h3>
           <p>A password manager, two-factor on the accounts that matter, and a check for old breaches. In that order.</p>
+        </article>
+        <article class="post featured flip future" data-pillar="future">
+          <img class="post-img" src="images/journal/crater-grey.jpg" alt="Standing on the rim of a volcanic crater above the clouds, face covered by a cap and neck gaiter." width="1400" height="933" loading="lazy" decoding="async" style="object-position: 72% 45%">
+          <div class="post-body">
+            <div class="meta"><b>Future</b><span>7 min read</span></div>
+            <h3>Going grey: travel without broadcasting where you are</h3>
+            <p>Delayed posts, stripped geotags and a less predictable routine. How to share the trip without handing anyone your location in real time.</p>
+          </div>
+        </article>
+        <article class="post past" data-pillar="past">
+          <img class="post-img" src="images/journal/sunset-joy.jpg" alt="A silhouette throwing up hand signs against a deep orange sunset." width="933" height="1400" loading="lazy" decoding="async" style="object-position: 50% 45%">
+          <div class="meta"><b>Past</b><span>4 min read</span></div>
+          <h3>Joy is a survival skill</h3>
+          <p>Play, music and movement aren't a break from preparedness. A regulated, joyful body notices more, decides faster and recovers sooner.</p>
+        </article>
+        <article class="post past" data-pillar="past">
+          <img class="post-img" src="images/journal/bamboo-dark.jpg" alt="A dark silhouette standing on a rocky trail inside a tunnel of green bamboo." width="933" height="1400" loading="lazy" decoding="async" style="object-position: 50% 42%">
+          <div class="meta"><b>Past</b><span>5 min read</span></div>
+          <h3>Fear in the dark: staying steady when you can’t see far</h3>
+          <p>When the canopy closes and sight lines shrink, your nervous system fills in the gaps. Simple drills to stay calm and alert in low light.</p>
+        </article>
+        <article class="post future" data-pillar="future">
+          <img class="post-img" src="images/journal/lighthouse-walk.jpg" alt="Walking across a lawn past a stone lighthouse and docked boats, framed by sea grape leaves." width="933" height="1400" loading="lazy" decoding="async" style="object-position: 55% 52%">
+          <div class="meta"><b>Future</b><span>6 min read</span></div>
+          <h3>Your phone is a beacon</h3>
+          <p>Wi-Fi probes, Bluetooth, location history and ad IDs. What your phone announces in every new town, and which settings quiet it down.</p>
+        </article>
+        <article class="post featured present" data-pillar="present">
+          <img class="post-img" src="images/journal/cypress-boardwalk.jpg" alt="Walking a wooden boardwalk through a flooded cypress forest, glancing to the side." width="1400" height="933" loading="lazy" decoding="async" style="object-position: 38% 50%">
+          <div class="post-body">
+            <div class="meta"><b>Present</b><span>6 min read</span></div>
+            <h3>Baseline and anomaly: noticing what’s out of place</h3>
+            <p>Every place has a normal rhythm. Learn the baseline of a trail, a street or a marina, and what doesn't belong starts to stand out.</p>
+          </div>
         </article>
       </div>
     </div>

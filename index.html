@@ -228,6 +228,10 @@ a.act:hover { color: var(--c); border-color: var(--c); }
 /* Ethos */
 .ethos { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr); gap: var(--s3); align-items: start; }
 @media (max-width: 860px) { .ethos { grid-template-columns: 1fr; } }
+.ethos-side { display: grid; gap: var(--s2); align-content: start; }
+.portrait { margin: 0; }
+.portrait img { display: block; width: 100%; max-width: 100%; height: auto; aspect-ratio: 1 / 1; object-fit: cover; object-position: 68% 45%; border-radius: 3px; border: 1px solid var(--rule); }
+@media (max-width: 860px) { .portrait img { aspect-ratio: 3 / 2; object-position: 60% 40%; } }
 .kanji { font-family: var(--f-display); font-size: clamp(5rem, 16vw, 10rem); line-height: .9; color: var(--ink); opacity: .9; }
 .kanji small { display: block; font-family: var(--f-mono); font-size: .75rem; letter-spacing: .1em; text-transform: uppercase; color: var(--ink-2); margin-top: var(--s0); opacity: 1; }
 .tenets { display: grid; gap: var(--s1); }
@@ -492,7 +496,12 @@ footer .mono { color: var(--ink-2); }
   <section id="ethos">
     <div class="wrap">
       <div class="ethos">
-        <div class="kanji" aria-hidden="true">浪人<small>Rōnin · the wave-person</small></div>
+        <div class="ethos-side">
+          <div class="kanji" aria-hidden="true">浪人<small>Rōnin · the wave-person</small></div>
+          <figure class="portrait">
+            <img src="images/portrait.jpg" width="1200" height="802" alt="Portrait in profile beside a glass wall, wearing glasses and a black jacket, with city buildings blurred behind." loading="lazy" decoding="async">
+          </figure>
+        </div>
         <div class="tenets">
           <div class="sec-head">
             <p class="mono">Why ronin</p>

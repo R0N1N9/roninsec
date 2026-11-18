@@ -12,7 +12,7 @@ Live at https://r0n1n9.github.io/roninsec/
 ## Sub-brands (one repo each)
 
 - [roninrecon](https://github.com/R0N1N9/roninrecon) → https://r0n1n9.github.io/roninrecon/
-- [roninrxisk](https://github.com/R0N1N9/roninrxisk) → https://r0n1n9.github.io/roninrxisk/
+- [roninrxisk](https://github.com/R0N1N9/roninrxisk) → https://r0n1n9.github.io/roninrxisk/ (PSSD Atlas at `/atlas/`)
 - [roninrhythm](https://github.com/R0N1N9/roninrhythm) → https://r0n1n9.github.io/roninrhythm/
 
 Each repo can take its own custom domain later.

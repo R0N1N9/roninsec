@@ -78,7 +78,8 @@ p { margin: 0; }
   background: var(--red); color: var(--ink); font-family: var(--f-display); font-size: .78rem; line-height: 1;
   writing-mode: vertical-rl; letter-spacing: -.05em;
 }
-.brand b { font-family: var(--f-display); font-weight: 400; font-size: 1.3rem; letter-spacing: .01em; }
+.brand b { font-family: var(--f-display); font-weight: 400; font-size: 1.3rem; letter-spacing: .01em; color: var(--ink); }
+.brand b .sec { color: var(--red); }
 nav ul { display: flex; gap: var(--s1); list-style: none; margin: 0; padding: 0; }
 nav a { text-decoration: none; color: var(--ink-2); }
 nav a:hover { color: var(--ink); }
@@ -233,7 +234,7 @@ footer .mono { color: var(--ink-2); }
 <body>
 <header class="top">
   <div class="wrap">
-    <a class="brand" href="#top" aria-label="RoninSec home"><span class="seal" aria-hidden="true">浪人</span><b>RoninSec</b></a>
+    <a class="brand" href="#top" aria-label="RoninSec home"><span class="seal" aria-hidden="true">浪人</span><b>Ronin<span class="sec">Sec</span></b></a>
     <nav aria-label="Main">
       <ul>
         <li><a href="#pillars">Pillars</a></li>

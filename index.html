@@ -202,6 +202,13 @@ a.act:hover { color: var(--c); border-color: var(--c); }
 .status.live { border-color: var(--past); color: var(--past); }
 .visit { justify-self: start; display: inline-flex; gap: .4rem; font-weight: 500; text-decoration: none; border-bottom: 1px solid var(--red); padding-bottom: 2px; }
 .visit:hover { color: var(--red); }
+.sib { color: inherit; text-decoration: none; border-bottom: 1px solid var(--rule); padding-bottom: 1px; }
+.sib:hover { color: var(--c, var(--red)); border-color: var(--c, var(--red)); }
+.post .sib { justify-self: start; font-size: .85rem; }
+.pillar li .sib span { font: inherit; color: inherit; text-transform: none; letter-spacing: 0; white-space: normal; }
+.net-links { list-style: none; margin: var(--s0) 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: .4rem 1.2rem; color: var(--ink-2); }
+.net-links a { color: inherit; text-decoration: none; border-bottom: 1px solid var(--rule); }
+.net-links a:hover { color: var(--red); border-color: var(--red); }
 .status { justify-self: start; font-family: var(--f-mono); font-size: .7rem; letter-spacing: .08em; text-transform: uppercase; padding: .25rem .55rem; border: 1px solid var(--red); color: var(--red); border-radius: 2px; }
 
 /* Ethos */
@@ -280,7 +287,7 @@ footer .mono { color: var(--ink-2); }
           <h3>Inner Terrain</h3>
           <p>Practices people have used for centuries to regulate, recover and stay present under pressure.</p>
           <ul>
-            <li><span>Dance &amp; movement</span><span>Body</span></li>
+            <li><span><a class="sib" href="https://r0n1n9.github.io/roninrhythm/">Dance &amp; movement <span aria-hidden="true">→</span></a></span><span>Body</span></li>
             <li><span>Somatic regulation</span><span>Nervous system</span></li>
             <li><span>Coaching &amp; reflection</span><span>Mind</span></li>
             <li><span>Contemplative practice</span><span>Spirit</span></li>
@@ -348,6 +355,7 @@ footer .mono { color: var(--ink-2); }
           <div class="meta"><b>Past</b><span>5 min read</span></div>
           <h3>What dance taught me about situational awareness</h3>
           <p>Partner work trains you to read weight, intention and timing before anyone says a word. The same skill keeps you safe on the street.</p>
+          <a class="sib" href="https://r0n1n9.github.io/roninrhythm/">Dance with me at RoninRhythm <span aria-hidden="true">→</span></a>
         </article>
         <article class="post present" data-pillar="present">
           <div class="meta"><b>Present</b><span>7 min read</span></div>
@@ -437,6 +445,10 @@ footer .mono { color: var(--ink-2); }
         <li><a class="icon" href="mailto:roninsec42@proton.me" aria-label="Email roninsec42@proton.me" title="roninsec42@proton.me"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3.5 6.5 12 13l8.5-6.5"/></svg></a></li>
         <li><a class="icon" href="https://www.instagram.com/roninsec/" target="_blank" rel="noopener" aria-label="Instagram @roninsec" title="Instagram @roninsec"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 8h3l1.6-2.4h6.8L17 8h3a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1z"/><circle cx="12" cy="13.2" r="3.4"/></svg></a></li>
         <li><a class="icon" href="https://www.youtube.com/@R0N1N_42" target="_blank" rel="noopener" aria-label="YouTube @R0N1N_42" title="YouTube @R0N1N_42"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="2.5" y="6.5" width="13" height="11" rx="2"/><path d="m15.5 10.5 6-3.5v10l-6-3.5z"/></svg></a></li>
+      </ul>
+      <ul class="net-links mono" aria-label="The Ronin network">
+        <li><a href="https://r0n1n9.github.io/roninrecon/">RoninRecon</a></li>
+        <li><a href="https://r0n1n9.github.io/roninrhythm/">RoninRhythm</a></li>
       </ul>
     </div>
     <p class="mono">© 2026 RoninSec</p>

@@ -9,6 +9,7 @@ Live at https://r0n1n9.github.io/roninsec/
 |---|---|
 | `index.html` | RoninSec home: the three pillars, project links, journal, network |
 | `recon/index.html` | Redirect to RoninRecon's own site |
+| `rhythm/index.html` | Redirect to RoninRhythm's own site |
 
 ## Sub-brands (one repo each)
 

@@ -255,6 +255,15 @@ a.act:hover { color: var(--c); border-color: var(--c); }
 .net-links { list-style: none; margin: var(--s0) 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: .4rem 1.2rem; color: var(--ink-2); }
 .net-links a { color: inherit; text-decoration: none; border-bottom: 1px solid var(--rule); }
 .net-links a:hover { color: var(--red); border-color: var(--red); }
+.sub-projects { display: grid; gap: .5rem; margin-top: .4rem; padding-top: .9rem; border-top: 1px dashed var(--rule); }
+.sub-projects > .mono { color: var(--ink-2); }
+.sub-projects ul { list-style: none; margin: 0; padding: 0; display: grid; gap: .8rem; }
+.sub-projects li { display: grid; gap: .2rem; }
+.sub-projects b { font-weight: 600; }
+.sub-projects span { color: var(--ink-2); font-size: .9rem; line-height: 1.5; }
+.sub-projects a { justify-self: start; font-family: var(--f-mono); font-size: .7rem; letter-spacing: .08em; text-transform: uppercase; text-decoration: none; color: var(--brass); border-bottom: 1px solid var(--brass); padding-bottom: 1px; margin-top: .15rem; }
+.sub-projects a:hover { color: var(--ink); border-color: var(--ink); }
+.sub-projects .muted { font-family: var(--f-mono); font-size: .7rem; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-2); margin-top: .15rem; }
 .status { justify-self: start; font-family: var(--f-mono); font-size: .7rem; letter-spacing: .08em; text-transform: uppercase; padding: .25rem .55rem; border: 1px solid var(--red); color: var(--red); border-radius: 2px; }
 
 /* Ethos */
@@ -512,6 +521,13 @@ footer .mono { color: var(--ink-2); }
           <p>Adventure and travel stories told from above and with boots on the ground, aerial photography and videography for people and places worth documenting.</p>
           <span class="status live">Live</span>
           <a class="visit" href="https://r0n1n9.github.io/roninrecon/">Visit RoninRecon <span aria-hidden="true">→</span></a>
+          <div class="sub-projects">
+            <p class="mono">Projects</p>
+            <ul>
+              <li><b>Intel Scraper Studio</b><span>A studio app that imports and backs up camera and drone footage, scores every clip and learns your music library.</span><a href="https://github.com/R0N1N9/intelscraperstudio" target="_blank" rel="noopener">GitHub <span aria-hidden="true">↗</span></a></li>
+              <li><b>Survey</b><span>A search and rescue application for planning and running searches in the field. In development.</span><span class="muted">Coming soon</span></li>
+            </ul>
+          </div>
         </article>
         <article class="sub">
           <p class="mono">Activism · Advocacy</p>
@@ -519,7 +535,12 @@ footer .mono { color: var(--ink-2); }
           <p>Research efforts, education, and safety practices for people who show up for their communities and the causes they believe in. Now live: psychiatric medication harm and PSSD research, plus the PSSD Atlas evidence map.</p>
           <span class="status live">Live</span>
           <a class="visit" href="https://r0n1n9.github.io/roninrxisk/">Visit RoninRxISK <span aria-hidden="true">→</span></a>
-          <a class="visit" href="https://r0n1n9.github.io/roninrxisk/atlas/">Open PSSD Atlas <span aria-hidden="true">→</span></a>
+          <div class="sub-projects">
+            <p class="mono">Projects</p>
+            <ul>
+              <li><b>PSSD Atlas</b><span>A living evidence map of PSSD research: every indexed paper, preprint and trial, plus drug-safety signals from FDA reports.</span><a href="https://r0n1n9.github.io/roninrxisk/atlas/" target="_blank" rel="noopener">Open the Atlas <span aria-hidden="true">↗</span></a></li>
+            </ul>
+          </div>
         </article>
         <article class="sub">
           <p class="mono">Dance instruction · Music production</p>
@@ -527,6 +548,12 @@ footer .mono { color: var(--ink-2); }
           <p>Bachata, Kizomba and Fusion lessons wherever I travel, plus Bachazomba and Kizchata, my own blend of the two, and DJ sets for partner-dance socials. 200+ venues and counting.</p>
           <span class="status live">Live</span>
           <a class="visit" href="https://r0n1n9.github.io/roninrhythm/">Visit RoninRhythm <span aria-hidden="true">→</span></a>
+          <div class="sub-projects">
+            <p class="mono">Projects</p>
+            <ul>
+              <li><b>Sway</b><span>Find Bachata, Kizomba, Salsa, Zouk and fusion socials, classes and festivals wherever you are. In development.</span><a href="https://r0n1n9.github.io/roninrhythm/#sway" target="_blank" rel="noopener">Learn more <span aria-hidden="true">↗</span></a></li>
+            </ul>
+          </div>
         </article>
       </div>
     </div>

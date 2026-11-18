@@ -8,10 +8,15 @@ Live at https://r0n1n9.github.io/roninsec/
 | Path | Site |
 |---|---|
 | `index.html` | RoninSec home: the three pillars, project links, journal, network |
-| `recon/index.html` | RoninRecon (travel, aerial photo and video) → `/roninsec/recon/` |
+| `recon/index.html` | Redirect to RoninRecon's own site |
 
-To add a sub-brand, create a folder (for example `rhythm/`) with its own `index.html`.
-It goes live at `/roninsec/rhythm/`.
+## Sub-brands (one repo each)
+
+- [roninrecon](https://github.com/R0N1N9/roninrecon) → https://r0n1n9.github.io/roninrecon/
+- [roninrxisk](https://github.com/R0N1N9/roninrxisk) → https://r0n1n9.github.io/roninrxisk/
+- [roninrhythm](https://github.com/R0N1N9/roninrhythm) → https://r0n1n9.github.io/roninrhythm/
+
+Each repo can take its own custom domain later.
 
 ## Pillars and projects
 

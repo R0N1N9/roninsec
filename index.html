@@ -6,12 +6,13 @@
 <title>RoninSec</title>
 <meta name="description" content="RoninSec: security for the digital, physical, and spiritual wanderer. Inner Terrain, Field Craft and Digital OPSEC.">
 <meta name="theme-color" content="#121412">
+<script>try { if (localStorage.getItem('roninsec-mode') === 'light') document.documentElement.setAttribute('data-mode', 'light'); } catch (e) {}</script>
 <meta property="og:title" content="RoninSec">
 <meta property="og:description" content="Security for the digital, physical, and spiritual wanderer. Inner Terrain, Field Craft and Digital OPSEC.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://r0n1n9.github.io/roninsec/">
 <meta property="og:site_name" content="RoninSec">
-<meta property="og:image" content="https://r0n1n9.github.io/roninsec/images/og-card.jpg">
+<meta property="og:image" content="https://r0n1n9.github.io/roninsec/images/og-card.jpg?v=2">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="RoninSec: Security for the digital, physical, and spiritual wanderer, beside a photo of a Subaru Forester on a desert road below a mountain.">
@@ -19,9 +20,9 @@
 <meta name="twitter:site" content="@R0N1N99">
 <meta name="twitter:title" content="RoninSec">
 <meta name="twitter:description" content="Security for the digital, physical, and spiritual wanderer. Inner Terrain, Field Craft and Digital OPSEC.">
-<meta name="twitter:image" content="https://r0n1n9.github.io/roninsec/images/og-card.jpg">
+<meta name="twitter:image" content="https://r0n1n9.github.io/roninsec/images/og-card.jpg?v=2">
 <link rel="canonical" href="https://r0n1n9.github.io/roninsec/">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='4' fill='%23B03A36'/%3E%3Ctext x='16' y='23' font-size='20' text-anchor='middle' fill='%23DAD6CA' font-family='serif'%3E%E6%B5%AA%3C/text%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Crect width='200' height='200' rx='36' fill='%23121412'/%3E%3CclipPath id='e'%3E%3Cpath d='M16 100Q100 26 184 100Q100 174 16 100Z'/%3E%3C/clipPath%3E%3Cg clip-path='url%28%23e%29' fill='none' stroke-width='12'%3E%3Ccircle cx='100' cy='100' r='42' stroke='%23B49F80'/%3E%3Ccircle cx='100' cy='100' r='22' stroke='%235E918A'/%3E%3C/g%3E%3Cpath d='M16 100Q100 26 184 100Q100 174 16 100Z' fill='none' stroke='%23DAD6CA' stroke-width='14' stroke-linejoin='round'/%3E%3Ccircle cx='100' cy='100' r='15' fill='%23B03A36'/%3E%3C/svg%3E">
 <style>
 /* Base reset */
 *, *::before, *::after { box-sizing: border-box; }
@@ -346,13 +347,34 @@ footer .mono { color: var(--ink-2); }
   transition: color .2s, border-color .2s, background .2s;
 }
 .contact .icon:hover { color: var(--red); border-color: var(--red); background: color-mix(in srgb, var(--red) 10%, transparent); }
+
+/* Light mode: same brand, warm paper ground. Dark stays the default. */
+:root[data-mode="light"] {
+  color-scheme: light;
+  --paper: #E6E2D8; --paper-2: #DAD5C8; --ink: #161816; --ink-2: #4E4B42; --rule: #BFB9AB;
+  --brass: #6B5B43; --red: #9A2F2B; --past: #535E33; --present: #6E5B3F; --future: #36615A;
+}
+:root[data-mode="light"] #topo { opacity: .12; }
+/* Logo lockup in the header: topo eye | 浪人 hanko + RoninSec */
+.brand { gap: .7rem; }
+.brand-eye { display: block; flex: none; color: var(--ink); }
+.brand-div { width: 1px; height: 28px; background: var(--rule); flex: none; }
+.hanko { display: inline-flex; flex-direction: column; align-items: center; justify-content: center; flex: none; width: 21px; height: 40px; background: #B03A36; border-radius: 3px; color: #F2EFE7; font-family: var(--f-display); font-size: 14px; line-height: 1.08; }
+.top-right { display: flex; align-items: center; gap: var(--s1); }
+.mode-btn { display: inline-grid; place-items: center; width: 2.75rem; height: 2.75rem; padding: 0; background: transparent; color: var(--ink); border: 1px solid var(--rule); border-radius: 3px; cursor: pointer; flex: none; }
+.mode-btn:hover { border-color: var(--red); color: var(--red); }
+.mode-btn .i-moon { display: none; }
+:root[data-mode="light"] .mode-btn .i-sun { display: none; }
+:root[data-mode="light"] .mode-btn .i-moon { display: block; }
+@media (max-width: 420px) { .brand-div { display: none; } .brand { gap: .5rem; } .top-right { gap: .5rem; } }
 </style>
 </head>
 <body>
 <canvas id="topo" aria-hidden="true"></canvas>
 <header class="top">
   <div class="wrap">
-    <a class="brand" href="#top" aria-label="RoninSec home"><span class="seal" aria-hidden="true">浪人</span><b>Ronin<span class="sec">Sec</span></b></a>
+    <a class="brand" href="#top" aria-label="RoninSec home"><svg class="brand-eye" width="36" height="36" viewBox="0 0 200 200" aria-hidden="true"><defs><clipPath id="brandEye"><path d="M16 100Q100 26 184 100Q100 174 16 100Z"></path></clipPath></defs><g clip-path="url(#brandEye)" fill="none" stroke-width="6" stroke-linejoin="round"><circle cx="100" cy="100" r="41" stroke="#B49F80"></circle><circle cx="100" cy="100" r="25" stroke="#5E918A"></circle></g><path d="M16 100Q100 26 184 100Q100 174 16 100Z" fill="none" stroke="currentColor" stroke-width="10" stroke-linejoin="round"></path><circle cx="100" cy="100" r="13" fill="#B03A36"></circle></svg><span class="brand-div" aria-hidden="true"></span><span class="hanko" aria-hidden="true"><span>浪</span><span>人</span></span><b>Ronin<span class="sec">Sec</span></b></a>
+    <div class="top-right">
     <nav aria-label="Main" id="site-nav">
       <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav-list">
         <span class="bars" aria-hidden="true"><i></i><i></i><i></i></span><span class="mono">Menu</span>
@@ -366,6 +388,8 @@ footer .mono { color: var(--ink-2); }
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
+    <button class="mode-btn" type="button" id="mode-btn" aria-label="Switch to light mode"><svg class="i-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"></circle><path d="M12 2.5v2.3M12 19.2v2.3M2.5 12h2.3M19.2 12h2.3M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6"></path></svg><svg class="i-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z"></path></svg></button>
+    </div>
   </div>
 </header>
 
@@ -786,6 +810,26 @@ footer .mono { color: var(--ink-2); }
   function maybeDraw() { const w = window.innerWidth; if (Math.abs(w - lastW) < 2 && canvas.height >= window.innerHeight) return; lastW = w; draw(); }
   window.addEventListener('resize', () => { clearTimeout(timer); timer = setTimeout(maybeDraw, 150); });
   maybeDraw();
+  document.addEventListener('rs-mode', draw);
+})();
+</script>
+<script>
+(function () {
+  const root = document.documentElement, btn = document.getElementById('mode-btn');
+  const meta = document.querySelector('meta[name="theme-color"]');
+  function apply(mode) {
+    if (mode === 'light') root.setAttribute('data-mode', 'light'); else root.removeAttribute('data-mode');
+    btn.setAttribute('aria-label', mode === 'light' ? 'Switch to dark mode' : 'Switch to light mode');
+    if (meta) meta.setAttribute('content', mode === 'light' ? '#E6E2D8' : '#121412');
+    document.dispatchEvent(new Event('rs-mode'));
+  }
+  let mode = root.getAttribute('data-mode') === 'light' ? 'light' : 'dark';
+  apply(mode);
+  btn.addEventListener('click', () => {
+    mode = mode === 'light' ? 'dark' : 'light';
+    try { localStorage.setItem('roninsec-mode', mode); } catch (e) {}
+    apply(mode);
+  });
 })();
 </script>
 </body>

@@ -20,8 +20,8 @@ Each repo can take its own custom domain later.
 
 ## Pillars and projects
 
-- **Past · Inner Terrain**: monogatari, haiku
-- **Present · Field Craft**: vigilance, vigil
-- **Future · Digital Recon**: katana, karambit
+- **Past · Inner Terrain**: sutori (web), monogatari, haiku
+- **Present · Field Craft**: vigilante (web), vigilance, vigil
+- **Future · Digital OPSEC**: wakizashi (web), katana, karambit
 
 No build step. `.nojekyll` tells GitHub Pages to serve the files as-is.

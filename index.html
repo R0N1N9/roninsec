@@ -248,6 +248,13 @@ a.act:hover { color: var(--c); border-color: var(--c); }
 .status.live { border-color: var(--past); color: var(--past); }
 .visit { justify-self: start; display: inline-flex; gap: .4rem; font-weight: 500; text-decoration: none; border-bottom: 1px solid var(--red); padding-bottom: 2px; }
 .visit:hover { color: var(--red); }
+.sib { color: inherit; text-decoration: none; border-bottom: 1px solid var(--rule); padding-bottom: 1px; }
+.sib i { font-style: normal; }
+.sib:hover { color: var(--c, var(--red)); border-color: var(--c, var(--red)); }
+.post .sib { justify-self: start; font-size: .85rem; }
+.net-links { list-style: none; margin: var(--s0) 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: .4rem 1.2rem; color: var(--ink-2); }
+.net-links a { color: inherit; text-decoration: none; border-bottom: 1px solid var(--rule); }
+.net-links a:hover { color: var(--red); border-color: var(--red); }
 .status { justify-self: start; font-family: var(--f-mono); font-size: .7rem; letter-spacing: .08em; text-transform: uppercase; padding: .25rem .55rem; border: 1px solid var(--red); color: var(--red); border-radius: 2px; }
 
 /* Ethos */
@@ -385,7 +392,7 @@ footer .mono { color: var(--ink-2); }
               <p>Practices people have used for centuries to regulate, recover and stay present under pressure.</p>
             </div>
             <ul class="practices" aria-label="Practices">
-            <li><span>Dance &amp; movement</span><span>Body</span></li>
+            <li><span><a class="sib" href="https://r0n1n9.github.io/roninrhythm/">Dance &amp; movement <i aria-hidden="true">→</i></a></span><span>Body</span></li>
             <li><span>Somatic regulation</span><span>Nervous system</span></li>
             <li><span>Coaching &amp; reflection</span><span>Mind</span></li>
             <li><span>Contemplative practice</span><span>Spirit</span></li>
@@ -460,6 +467,7 @@ footer .mono { color: var(--ink-2); }
           <div class="meta"><b>Past</b><span>5 min read</span></div>
           <h3>What dance taught me about situational awareness</h3>
           <p>Partner work trains you to read weight, intention and timing before anyone says a word. The same skill keeps you safe on the street.</p>
+          <a class="sib" href="https://r0n1n9.github.io/roninrhythm/">Dance with me at RoninRhythm <i aria-hidden="true">→</i></a>
         </article>
         <article class="post present" data-pillar="present">
           <div class="meta"><b>Present</b><span>7 min read</span></div>
@@ -516,8 +524,9 @@ footer .mono { color: var(--ink-2); }
         <article class="sub">
           <p class="mono">Dance instruction · Music production</p>
           <p class="name">Ronin<em>Rhythm</em></p>
-          <p>Classes and private sessions where movement builds confidence, connection and body awareness.</p>
-          <span class="status">Coming soon</span>
+          <p>Bachata, Kizomba and Fusion lessons wherever I travel, plus Bachazomba and Kizchata, my own blend of the two, and DJ sets for partner-dance socials. 200+ venues and counting.</p>
+          <span class="status live">Live</span>
+          <a class="visit" href="https://r0n1n9.github.io/roninrhythm/">Visit RoninRhythm <span aria-hidden="true">→</span></a>
         </article>
       </div>
     </div>
@@ -557,7 +566,7 @@ footer .mono { color: var(--ink-2); }
           </div>
         </div>
         <dl class="interests" aria-label="Interests">
-          <div class="past"><dt class="mono">Movement</dt><dd>Dance, martial arts, sports &amp; the outdoors</dd></div>
+          <div class="past"><dt class="mono">Movement</dt><dd><a class="sib" href="https://r0n1n9.github.io/roninrhythm/">Dance</a>, martial arts, sports &amp; the outdoors</dd></div>
           <div class="present"><dt class="mono">Field</dt><dd>Travel, milsim, aerial drone work, medical research</dd></div>
           <div class="future"><dt class="mono">Security</dt><dd>Cybersecurity, OSINT and all things security</dd></div>
           <div class="lens"><dt class="mono">Lens</dt><dd>Photography and videography</dd></div>
@@ -612,6 +621,10 @@ footer .mono { color: var(--ink-2); }
         <li><a class="icon" href="https://www.youtube.com/@R0N1N_42" target="_blank" rel="noopener" aria-label="YouTube @R0N1N_42" title="YouTube @R0N1N_42"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M10 8.6v6.8l5.6-3.4z" fill="currentColor"/></svg></a></li>
         <li><a class="icon" href="https://x.com/R0N1N99" target="_blank" rel="noopener" aria-label="X @R0N1N99" title="X @R0N1N99"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 5h16a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1h-8.5L7 20.5V17H4a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1z"/><path d="M8 10h8M8 13h5"/></svg></a></li>
         <li><a class="icon" href="https://github.com/R0N1N9" target="_blank" rel="noopener" aria-label="GitHub R0N1N9" title="GitHub R0N1N9"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m8 8-4 4 4 4M16 8l4 4-4 4M13.5 6l-3 12"/></svg></a></li>
+      </ul>
+      <ul class="net-links mono" aria-label="The Ronin network">
+        <li><a href="https://r0n1n9.github.io/roninrecon/">RoninRecon</a></li>
+        <li><a href="https://r0n1n9.github.io/roninrhythm/">RoninRhythm</a></li>
       </ul>
     </div>
     <p class="mono">© 2026 RoninSec</p>

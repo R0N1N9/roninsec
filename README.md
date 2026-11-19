@@ -1,3 +1,5 @@
+<p align="center"><img src="docs/logo.svg" width="120" alt="RoninSec logo"></p>
+
 # RoninSec
 
 **Security for the digital, physical, and spiritual wanderer.**
@@ -5,6 +7,8 @@
 RoninSec is my umbrella brand for security and reconnaissance across three timelines: the inner work rooted in the past, the field skills the present calls for, and the digital defense the future demands. This repo is the source for its website.
 
 **Live site:** https://r0n1n9.github.io/roninsec/
+
+![RoninSec homepage: hero with the three timelines, Past, Present and Future](docs/screenshots/home.png)
 
 ## Pillars & Projects
 
@@ -47,6 +51,11 @@ Sibling brands that carry the RoninSec approach into specific passions. Each has
 | [RoninRhythm](https://github.com/R0N1N9/roninrhythm) | Dance instruction, DJ & music production | https://r0n1n9.github.io/roninrhythm/ | [Sway](https://r0n1n9.github.io/roninrhythm/#sway): find partner-dance socials, classes and festivals anywhere (in development) |
 | [RoninRxISK](https://github.com/R0N1N9/roninrxisk) | Psych med harm & PSSD research | https://r0n1n9.github.io/roninrxisk/ | [PSSD Atlas](https://claude.ai/artifact/EN98KYUks86xpNexsLm2dq) (web app): a living evidence map of PSSD research and drug-safety signals |
 
+## Screenshots
+
+![The Pillars & Projects section, starting with Inner Terrain and its sutori, monogatari and haiku cards](docs/screenshots/pillars.png)
+*Pillars & Projects: each timeline with its practices and its web, desktop and Android apps.*
+
 ## Contact
 
 - Email: roninsec42@proton.me
@@ -61,3 +70,12 @@ Sibling brands that carry the RoninSec approach into specific passions. Each has
 | `index.html` | The whole site: hero, pillars & projects, journal, network, ethos, about, contact |
 | `images/` | Site photos, with location and camera metadata removed |
 | `.nojekyll` | Tells GitHub Pages to serve the files as-is, with no build step |
+| `docs/` | README assets: the logo (the site's favicon as an SVG file) and screenshots |
+
+## Previewing locally
+
+No build step. Serve the folder and open http://localhost:8000:
+
+```bash
+python3 -m http.server 8000
+```

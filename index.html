@@ -231,9 +231,10 @@ a.act:hover { color: var(--c); border-color: var(--c); }
 .editions .en .jp { font-family: var(--f-display); font-weight: 400; color: var(--c); margin-left: .2rem; }
 .editions .ek { font-family: var(--f-mono); font-size: .66rem; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-2); }
 .proj.suite { grid-template-rows: none; align-content: start; }
+.tools.one { grid-template-columns: minmax(0, 1fr); }
 .tools.two { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 @media (max-width: 900px) { .tools.two { grid-template-columns: 1fr; } }
-.editions li:has(.ed) { grid-template-columns: auto minmax(0, 1fr); }
+.editions li:has(.ed):not(:has(.act)) { grid-template-columns: auto minmax(0, 1fr); }
 .editions .ed { grid-column: 1 / -1; color: var(--ink-2); font-size: .88rem; line-height: 1.45; }
 .proj.suite .acts { grid-column: 1 / -1; }
 .proj.is-private { border-style: dashed; background: transparent; }
@@ -502,10 +503,14 @@ footer .mono { color: var(--ink-2); }
             <li><span>Contemplative practice</span><span>Spirit</span></li>
           </ul>
           </div>
-          <div class="tools" aria-label="Inner Terrain tools">
-            <div class="proj is-private"><span class="pn">sutori <span class="jp" lang="ja">ストーリー</span></span><span class="pk">Web app</span><p>The instant, in-browser tool for Inner Terrain: reflection and check-ins with nothing to install.</p><div class="acts"><span class="act muted">Coming soon</span></div></div>
-            <div class="proj"><span class="pn">monogatari <span class="jp" lang="ja">物語</span></span><span class="pk">Desktop app</span><p>A private, encrypted place to write the story of your life, with your photos placed on the timeline automatically.</p><div class="acts"><a class="act" href="https://github.com/R0N1N9/monogatari" target="_blank" rel="noopener">GitHub <span aria-hidden="true">↗</span></a></div></div>
-            <div class="proj"><span class="pn">haiku <span class="jp" lang="ja">俳句</span></span><span class="pk">Android app</span><p>A pocket check-in for mood, energy and safety, answered three lines at a time. The lite companion to monogatari.</p><div class="acts"><a class="act" href="https://github.com/R0N1N9/haiku" target="_blank" rel="noopener">GitHub <span aria-hidden="true">↗</span></a></div></div>
+          <div class="tools one" aria-label="Inner Terrain tools">
+            <div class="proj suite"><span class="pn">Monogatari <span class="jp" lang="ja">物語</span></span><span class="pk">2 apps · private</span><p>A suite of private, trauma-informed apps for re-knowing yourself by documenting your life and reading it back. Stored on your own devices and encrypted, with no accounts and no streaks.</p>
+              <ul class="editions">
+                <li><span class="en">Sut&#333;ri <span class="jp" lang="ja">ストーリー</span></span><span class="ek">Desktop &amp; web</span><a class="act" href="https://github.com/R0N1N9/sutori" target="_blank" rel="noopener">GitHub <span aria-hidden="true">↗</span></a><span class="ed">Interactive stories and timelines of your life: write chapters beside your own photos, placed by the day each was taken.</span></li>
+                <li><span class="en">Haiku <span class="jp" lang="ja">俳句</span></span><span class="ek">Android</span><span class="act muted">Private · link coming</span><span class="ed">The short form: a 30-second check-in, a three-line reflection and a safety plan in your pocket, flowing into Sut&#333;ri's timeline.</span></li>
+              </ul>
+              <div class="acts"><a class="act" href="https://github.com/R0N1N9/monogatari" target="_blank" rel="noopener">Monogatari on GitHub <span aria-hidden="true">↗</span></a></div>
+            </div>
           </div>
         </article>
         <article class="pillar present" id="present">

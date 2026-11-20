@@ -12,16 +12,14 @@ RoninSec is my umbrella brand for security and reconnaissance across three timel
 
 ## Pillars & Projects
 
-Inner Terrain has a web app, a desktop app and an Android app. Field Craft and Digital OPSEC are organized as offerings, some of them suites of several apps.
+Each pillar is organized as offerings, several of them suites of apps that work together.
 
 ### Past · Inner Terrain
 Mind, body, spirit: movement, somatic regulation, coaching and contemplative practice.
 
-| Project | Platform | Links |
+| Offering | What it is | Links |
 |---|---|---|
-| sutori ストーリー | Web app | Coming soon |
-| [monogatari](https://github.com/R0N1N9/monogatari) 物語 | Desktop | Private, encrypted life story writing with photos placed on the timeline automatically |
-| [haiku](https://github.com/R0N1N9/haiku) 俳句 | Android | Three-line check-ins for mood, energy and safety; the lite companion to monogatari |
+| [**Monogatari**](https://github.com/R0N1N9/monogatari) 物語 | A suite of private, trauma-informed apps for re-knowing yourself by documenting your life: **Sutōri** ストーリー (desktop and web: stories and timelines of your life beside your photos) and **Haiku** 俳句 (Android: 30-second check-ins, three-line reflections and a pocket safety plan) | [Monogatari](https://github.com/R0N1N9/monogatari) · [Sutōri](https://github.com/R0N1N9/sutori) · Haiku: private repo |
 
 ### Present · Field Craft
 Defense, rescue, readiness: self defense, situational awareness, search and rescue and emergency readiness.

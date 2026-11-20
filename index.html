@@ -225,6 +225,11 @@ section > .wrap { padding-block: var(--s4); display: grid; gap: var(--s3); }
 a.act:hover { color: var(--c); border-color: var(--c); }
 .act.primary { color: var(--c); border-color: var(--c); }
 .act.muted { color: var(--ink-2); border-bottom: 0; }
+.proj.suite .editions { grid-column: 1 / -1; list-style: none; margin: 0; padding: 0; display: grid; }
+.editions li { display: grid; grid-template-columns: minmax(0, 1fr) auto auto; align-items: baseline; gap: .75rem; padding: .45rem 0; border-top: 1px solid var(--rule); }
+.editions .en { font-weight: 500; min-width: 0; }
+.editions .en .jp { font-family: var(--f-display); font-weight: 400; color: var(--c); margin-left: .2rem; }
+.editions .ek { font-family: var(--f-mono); font-size: .66rem; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-2); }
 .proj.is-private { border-style: dashed; background: transparent; }
 
 
@@ -532,9 +537,15 @@ footer .mono { color: var(--ink-2); }
           </ul>
           </div>
           <div class="tools" aria-label="Digital OPSEC tools">
-            <div class="proj"><span class="pn">wakizashi <span class="jp" lang="ja">脇差</span></span><span class="pk">Web app</span><p>The web edition of the RoninSec security suite: threat intel, defense, assessment and personal OPSEC, running entirely in your browser.</p><div class="acts"><a class="act primary" href="https://r0n1n9.github.io/wakizashi/" target="_blank" rel="noopener">Open web app <span aria-hidden="true">↗</span></a><a class="act" href="https://github.com/R0N1N9/wakizashi" target="_blank" rel="noopener">GitHub <span aria-hidden="true">↗</span></a></div></div>
-            <div class="proj is-private"><span class="pn">katana <span class="jp" lang="ja">刀</span></span><span class="pk">Desktop suite</span><p>The full RoninSec security console: threat intel, defense, authorized offense and counter-intel in one portable app.</p><div class="acts"><span class="act muted">Private repo · link coming</span></div></div>
-            <div class="proj"><span class="pn">karambit</span><span class="pk">Android app</span><p>The native Android edition: Bluetooth recon, device hardening audit, network recon and offline IOC tools.</p><div class="acts"><a class="act" href="https://github.com/R0N1N9/karambit" target="_blank" rel="noopener">GitHub <span aria-hidden="true">↗</span></a></div></div>
+            <div class="proj suite"><span class="pn">Daisho Suite <span class="jp" lang="ja">大小</span></span><span class="pk">3 editions</span><p>One security suite carried three ways: threat intel, defense, assessment and personal OPSEC on the web, the desktop and Android.</p>
+              <ul class="editions">
+                <li><span class="en">Katana <span class="jp" lang="ja">刀</span></span><span class="ek">Desktop</span><span class="act muted">Private · link coming</span></li>
+                <li><span class="en">Wakizashi <span class="jp" lang="ja">脇差</span></span><span class="ek">Web</span><a class="act primary" href="https://r0n1n9.github.io/wakizashi/" target="_blank" rel="noopener">Open <span aria-hidden="true">↗</span></a></li>
+                <li><span class="en">Tant&#333; <span class="jp" lang="ja">短刀</span></span><span class="ek">Android</span><span class="act muted">Link coming</span></li>
+              </ul>
+            </div>
+            <div class="proj is-private"><span class="pn">Karambit</span><span class="pk">Mobile pentest suite</span><p>Penetration testing for phones and mobile apps, for systems you own or are authorized to test.</p><div class="acts"><span class="act muted">In development</span></div></div>
+            <div class="proj"><span class="pn">NetWatch</span><span class="pk">Network console</span><p>Watches your local network, flags intrusions, maps who your devices talk to and senses movement in a room from Wi-Fi signals. An experimental R&amp;D lab for your own networks.</p><div class="acts"><a class="act" href="https://github.com/R0N1N9/netwatch" target="_blank" rel="noopener">GitHub <span aria-hidden="true">↗</span></a></div></div>
           </div>
         </article>
       </div>

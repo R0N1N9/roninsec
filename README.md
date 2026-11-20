@@ -12,7 +12,7 @@ RoninSec is my umbrella brand for security and reconnaissance across three timel
 
 ## Pillars & Projects
 
-Each pillar has a web app that opens in your browser, a desktop app for deeper work, and an Android app for the field.
+Inner Terrain and Field Craft each have a web app that opens in your browser, a desktop app for deeper work, and an Android app for the field. Digital OPSEC is organized as three offerings.
 
 ### Past · Inner Terrain
 Mind, body, spirit: movement, somatic regulation, coaching and contemplative practice.
@@ -35,11 +35,11 @@ Defense, rescue, readiness: self defense, situational awareness, search and resc
 ### Future · Digital OPSEC
 Cyber security, OSINT, privacy and threat literacy.
 
-| Project | Platform | Links |
+| Offering | What it is | Links |
 |---|---|---|
-| [wakizashi](https://github.com/R0N1N9/wakizashi) 脇差 | Web app | [Open the web app](https://r0n1n9.github.io/wakizashi/) · threat intel, defense, assessment and personal OPSEC in the browser |
-| katana 刀 | Desktop | Private repo · the full security console: threat intel, defense, authorized offense and counter-intel |
-| [karambit](https://github.com/R0N1N9/karambit) | Android | Bluetooth recon, device hardening audit, network recon and offline IOC tools |
+| **Daisho Suite** 大小 | One security suite in three editions: **Katana** 刀 (desktop), **Wakizashi** 脇差 (web) and **Tantō** 短刀 (Android, formerly karambit) | [Open Wakizashi](https://r0n1n9.github.io/wakizashi/) · [Wakizashi on GitHub](https://github.com/R0N1N9/wakizashi) · Katana and Tantō: links coming |
+| **Karambit** | Mobile penetration testing suite, for systems you own or are authorized to test | In development |
+| [**NetWatch**](https://github.com/R0N1N9/netwatch) | Experimental network and spatial-sensing console: hosts and intrusion alerts on your network, who your devices talk to, and Wi-Fi presence sensing | [GitHub](https://github.com/R0N1N9/netwatch) |
 
 ## The Ronin network
 

@@ -230,6 +230,12 @@ a.act:hover { color: var(--c); border-color: var(--c); }
 .editions .en { font-weight: 500; min-width: 0; }
 .editions .en .jp { font-family: var(--f-display); font-weight: 400; color: var(--c); margin-left: .2rem; }
 .editions .ek { font-family: var(--f-mono); font-size: .66rem; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-2); }
+.proj.suite { grid-template-rows: none; align-content: start; }
+.tools.two { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+@media (max-width: 900px) { .tools.two { grid-template-columns: 1fr; } }
+.editions li:has(.ed) { grid-template-columns: auto minmax(0, 1fr); }
+.editions .ed { grid-column: 1 / -1; color: var(--ink-2); font-size: .88rem; line-height: 1.45; }
+.proj.suite .acts { grid-column: 1 / -1; }
 .proj.is-private { border-style: dashed; background: transparent; }
 
 
@@ -497,9 +503,9 @@ footer .mono { color: var(--ink-2); }
           </ul>
           </div>
           <div class="tools" aria-label="Inner Terrain tools">
-            <div class="proj is-private"><span class="pn">sutori</span><span class="pk">Web app</span><p>The instant, in-browser tool for Inner Terrain: reflection and check-ins with nothing to install.</p><div class="acts"><span class="act muted">Coming soon</span></div></div>
+            <div class="proj is-private"><span class="pn">sutori <span class="jp" lang="ja">ストーリー</span></span><span class="pk">Web app</span><p>The instant, in-browser tool for Inner Terrain: reflection and check-ins with nothing to install.</p><div class="acts"><span class="act muted">Coming soon</span></div></div>
             <div class="proj"><span class="pn">monogatari <span class="jp" lang="ja">物語</span></span><span class="pk">Desktop app</span><p>A private, encrypted place to write the story of your life, with your photos placed on the timeline automatically.</p><div class="acts"><a class="act" href="https://github.com/R0N1N9/monogatari" target="_blank" rel="noopener">GitHub <span aria-hidden="true">↗</span></a></div></div>
-            <div class="proj"><span class="pn">haiku</span><span class="pk">Android app</span><p>A pocket check-in for mood, energy and safety, answered three lines at a time. The lite companion to monogatari.</p><div class="acts"><a class="act" href="https://github.com/R0N1N9/haiku" target="_blank" rel="noopener">GitHub <span aria-hidden="true">↗</span></a></div></div>
+            <div class="proj"><span class="pn">haiku <span class="jp" lang="ja">俳句</span></span><span class="pk">Android app</span><p>A pocket check-in for mood, energy and safety, answered three lines at a time. The lite companion to monogatari.</p><div class="acts"><a class="act" href="https://github.com/R0N1N9/haiku" target="_blank" rel="noopener">GitHub <span aria-hidden="true">↗</span></a></div></div>
           </div>
         </article>
         <article class="pillar present" id="present">
@@ -516,10 +522,22 @@ footer .mono { color: var(--ink-2); }
             <li><span>Emergency readiness</span><span>Household</span></li>
           </ul>
           </div>
-          <div class="tools" aria-label="Field Craft tools">
-            <div class="proj"><span class="pn">vigilante</span><span class="pk">Web app</span><p>A situational-awareness console that runs in any browser, plus a Field Agent phone app with nothing to install.</p><div class="acts"><a class="act primary" href="https://r0n1n9.github.io/vigilante/" target="_blank" rel="noopener">Open web app <span aria-hidden="true">↗</span></a><a class="act" href="https://github.com/R0N1N9/vigilante" target="_blank" rel="noopener">GitHub <span aria-hidden="true">↗</span></a></div></div>
-            <div class="proj"><span class="pn">vigilance</span><span class="pk">Desktop app</span><p>The desktop edition for Mac, Linux and Windows, adding drone Remote ID scanning, mesh radios and multi-monitor pop-outs.</p><div class="acts"><a class="act" href="https://github.com/R0N1N9/vigilance" target="_blank" rel="noopener">GitHub <span aria-hidden="true">↗</span></a></div></div>
-            <div class="proj is-private"><span class="pn">vigil</span><span class="pk">Android app</span><p>Public safety data for wherever you are right now, ranked by what matters to you, with what to do about each.</p><div class="acts"><span class="act muted">Private repo · link coming</span></div></div>
+          <div class="tools two" aria-label="Field Craft tools">
+            <div class="proj suite"><span class="pn">Vigilance Suite</span><span class="pk">3 apps · 1 team</span><p>A neighborhood situational-awareness console: live aircraft and drones, weather, crime and local incidents for the area you watch. All three apps join the same encrypted team.</p>
+              <ul class="editions">
+                <li><span class="en">Vigilance</span><span class="ek">Desktop</span><a class="act" href="https://github.com/R0N1N9/vigilance" target="_blank" rel="noopener">GitHub <span aria-hidden="true">↗</span></a></li>
+                <li><span class="en">Vigilante</span><span class="ek">Web &amp; phone</span><a class="act primary" href="https://r0n1n9.github.io/vigilante/" target="_blank" rel="noopener">Open <span aria-hidden="true">↗</span></a></li>
+                <li><span class="en">Vigil</span><span class="ek">Android</span><span class="act muted">Private · link coming</span></li>
+              </ul>
+            </div>
+            <div class="proj suite"><span class="pn">ISRStudio</span><span class="pk">Drone ISR · offline</span><p>Turns a card of drone photos into something you can act on. Runs on a laptop with no internet, and never writes to the SD card.</p>
+              <ul class="editions">
+                <li><span class="en">SAR</span><span class="ek">Find people</span><span class="ed">Scans every photo, ranks and maps the hits, and exports a search report and GPX/KML for ground teams.</span></li>
+                <li><span class="en">Survey</span><span class="ek">Assess a site</span><span class="ed">Sightlines, blind spots, camera placement, access points and perimeter, as a client report.</span></li>
+                <li><span class="en">Stakeout</span><span class="ek">Watch a place</span><span class="ed">A fixed camera on a gate for a day or a week: when it is busy, dead or visited out of hours.</span></li>
+              </ul>
+              <div class="acts"><a class="act" href="https://github.com/R0N1N9/isrstudio" target="_blank" rel="noopener">GitHub <span aria-hidden="true">↗</span></a><a class="act" href="https://r0n1n9.github.io/roninrecon/#sar" target="_blank" rel="noopener">On RoninRecon <span aria-hidden="true">↗</span></a></div>
+            </div>
           </div>
         </article>
         <article class="pillar future" id="future">
@@ -544,8 +562,8 @@ footer .mono { color: var(--ink-2); }
                 <li><span class="en">Tant&#333; <span class="jp" lang="ja">短刀</span></span><span class="ek">Android</span><span class="act muted">Link coming</span></li>
               </ul>
             </div>
-            <div class="proj is-private"><span class="pn">Karambit</span><span class="pk">Mobile pentest suite</span><p>Penetration testing for phones and mobile apps, for systems you own or are authorized to test.</p><div class="acts"><span class="act muted">In development</span></div></div>
-            <div class="proj"><span class="pn">NetWatch</span><span class="pk">Network console</span><p>Watches your local network, flags intrusions, maps who your devices talk to and senses movement in a room from Wi-Fi signals. An experimental R&amp;D lab for your own networks.</p><div class="acts"><a class="act" href="https://github.com/R0N1N9/netwatch" target="_blank" rel="noopener">GitHub <span aria-hidden="true">↗</span></a></div></div>
+            <div class="proj is-private"><span class="pn">Karambit</span><span class="pk">Testing suite</span><p>A mobile penetration testing suite for phones and mobile apps, for systems you own or are authorized to test.</p><div class="acts"><span class="act muted">In development</span></div></div>
+            <div class="proj"><span class="pn">NetWatch</span><span class="pk">Experimental</span><p>An experimental playground for advanced security features. It watches your local network, flags intrusions, maps who your devices talk to and senses movement in a room from Wi-Fi signals.</p><div class="acts"><a class="act" href="https://github.com/R0N1N9/netwatch" target="_blank" rel="noopener">GitHub <span aria-hidden="true">↗</span></a></div></div>
           </div>
         </article>
       </div>

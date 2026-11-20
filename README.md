@@ -12,25 +12,24 @@ RoninSec is my umbrella brand for security and reconnaissance across three timel
 
 ## Pillars & Projects
 
-Inner Terrain and Field Craft each have a web app that opens in your browser, a desktop app for deeper work, and an Android app for the field. Digital OPSEC is organized as three offerings.
+Inner Terrain has a web app, a desktop app and an Android app. Field Craft and Digital OPSEC are organized as offerings, some of them suites of several apps.
 
 ### Past · Inner Terrain
 Mind, body, spirit: movement, somatic regulation, coaching and contemplative practice.
 
 | Project | Platform | Links |
 |---|---|---|
-| sutori | Web app | Coming soon |
+| sutori ストーリー | Web app | Coming soon |
 | [monogatari](https://github.com/R0N1N9/monogatari) 物語 | Desktop | Private, encrypted life story writing with photos placed on the timeline automatically |
-| [haiku](https://github.com/R0N1N9/haiku) | Android | Three-line check-ins for mood, energy and safety; the lite companion to monogatari |
+| [haiku](https://github.com/R0N1N9/haiku) 俳句 | Android | Three-line check-ins for mood, energy and safety; the lite companion to monogatari |
 
 ### Present · Field Craft
 Defense, rescue, readiness: self defense, situational awareness, search and rescue and emergency readiness.
 
-| Project | Platform | Links |
+| Offering | What it is | Links |
 |---|---|---|
-| [vigilante](https://github.com/R0N1N9/vigilante) | Web app | [Open the web app](https://r0n1n9.github.io/vigilante/) · situational-awareness console, plus a Field Agent phone app |
-| [vigilance](https://github.com/R0N1N9/vigilance) | Desktop | Desktop edition with drone Remote ID scanning, mesh radios and multi-monitor pop-outs |
-| vigil | Android | Private repo · public safety data for where you are, ranked by what matters to you |
+| **Vigilance Suite** | Neighborhood situational-awareness console in three apps that join the same encrypted team: **Vigilance** (desktop), **Vigilante** (web and Field Agent phone app) and **Vigil** (Android) | [Open Vigilante](https://r0n1n9.github.io/vigilante/) · [Vigilance on GitHub](https://github.com/R0N1N9/vigilance) · Vigil: private repo |
+| [**ISRStudio**](https://github.com/R0N1N9/isrstudio) | Offline drone ISR tools in three sections: **SAR** (find people in drone photos, export for ground teams), **Survey** (site security assessment) and **Stakeout** (activity patterns from a fixed camera) | [GitHub](https://github.com/R0N1N9/isrstudio) |
 
 ### Future · Digital OPSEC
 Cyber security, OSINT, privacy and threat literacy.
@@ -38,8 +37,8 @@ Cyber security, OSINT, privacy and threat literacy.
 | Offering | What it is | Links |
 |---|---|---|
 | **Daisho Suite** 大小 | One security suite in three editions: **Katana** 刀 (desktop), **Wakizashi** 脇差 (web) and **Tantō** 短刀 (Android, formerly karambit) | [Open Wakizashi](https://r0n1n9.github.io/wakizashi/) · [Wakizashi on GitHub](https://github.com/R0N1N9/wakizashi) · Katana and Tantō: links coming |
-| **Karambit** | Mobile penetration testing suite, for systems you own or are authorized to test | In development |
-| [**NetWatch**](https://github.com/R0N1N9/netwatch) | Experimental network and spatial-sensing console: hosts and intrusion alerts on your network, who your devices talk to, and Wi-Fi presence sensing | [GitHub](https://github.com/R0N1N9/netwatch) |
+| **Karambit** | Testing suite: mobile penetration testing, for systems you own or are authorized to test | In development |
+| [**NetWatch**](https://github.com/R0N1N9/netwatch) | Experimental playground for advanced security features. A network and spatial-sensing console: hosts and intrusion alerts on your network, who your devices talk to, and Wi-Fi presence sensing | [GitHub](https://github.com/R0N1N9/netwatch) |
 
 ## The Ronin network
 
